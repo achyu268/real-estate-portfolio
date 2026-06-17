@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Achyutha H P — High-End Real Estate Editor. Premium cinematic post-production boutique for luxury property developers.">
+    <title>Achyutha H P — High-End Real Estate Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; color: #FDFDFA; overflow-x: hidden; }
+        .text-balance { text-wrap: balance; }
+        
+        /* High-end custom screen layout rendering optimizations */
+        .premium-border { border-color: rgba(255, 255, 255, 0.08); }
+        .text-contrast-high { color: #FFFFFF; }
+        .text-contrast-mid { color: #E5E5E0; }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#C8A96E] selection:text-black">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#050505]/80 backdrop-blur-md border-b premium-border h-24 flex items-center">
+        <div class="w-full max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <div>
+                <a href="#" class="font-serif text-lg tracking-[0.3em] text-[#C8A96E] font-light">ACHYUTHA H P</a>
+            </div>
+            <div class="flex items-center gap-8 text-[11px] uppercase tracking-[0.25em] font-medium">
+                <a href="#portfolio" class="text-contrast-mid hover:text-[#C8A96E] transition-colors">The Archive</a>
+                <a href="#pillars" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden sm:inline-block">Pillars</a>
+                <a href="#contact" class="text-contrast-high border border-white/20 px-5 py-2.5 rounded-none hover:bg-white hover:text-black transition-all">Inquire</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-24 px-6 overflow-hidden border-b premium-border">
+        <div class="absolute inset-0 w-full h-full pointer-events-none opacity-20 z-0">
+            <iframe class="w-full h-full scale-[1.4] object-cover" src="https://drive.google.com/file/d/1OqvcxZ4FRl6_bLmTf1L8fQS_py1LWWGr/preview?autoplay=1&mute=1&loop=1&playlist=1OqvcxZ4FRl6_bLmTf1L8fQS_py1LWWGr&controls=0" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505] z-10"></div>
+
+        <div class="relative max-w-5xl mx-auto text-center z-20 space-y-8">
+            <span class="text-[11px] font-semibold tracking-[0.45em] text-[#C8A96E] uppercase block">High-End Architectural Cinema Boutique</span>
+            <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl font-light text-white tracking-tight leading-[1.05] text-balance">
+                Post-production built to sell <span class="italic text-[#C8A96E]">prestige assets.</span>
+            </h1>
+            <p class="text-contrast-mid text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed text-balance">
+                Precision pacing, custom luminescence color profiles, and multi-tier spatial sound design engineered exclusively for world-class developers.
+            </p>
+            <div class="pt-6">
+                <a href="#portfolio" class="inline-flex items-center gap-4 bg-white text-black px-10 py-4 text-xs font-semibold uppercase tracking-[0.3em] hover:bg-[#C8A96E] hover:text-black transition-all rounded-none">
+                    Enter The Portfolio <i class="fas fa-chevron-down text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="bg-black py-32 border-b premium-border">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+            <span class="text-[10px] tracking-[0.5em] text-[#C8A96E] uppercase block mb-3 font-semibold">Curated Media Assets</span>
+            <h2 class="font-serif text-4xl sm:text-5xl font-light text-white">The Active Showcase Archive</h2>
+        </div>
+
+        <div class="w-full max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12" id="portfolio-grid-engine">
+            </div>
+    </section>
+
+    <section id="pillars" class="py-32 bg-[#080808] border-b premium-border">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="max-w-3xl mb-24">
+                <span class="text-[10px] tracking-[0.5em] text-[#C8A96E] uppercase block mb-3 font-semibold">Strategic Value Placement</span>
+                <h2 class="font-serif text-4xl sm:text-6xl font-light text-white leading-tight text-balance">Every single frame is calibrated to convey market authority.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
+                <div class="space-y-4 border-l border-[#C8A96E]/30 pl-6">
+                    <span class="font-mono text-xs text-[#C8A96E] tracking-widest block font-bold">01 // PRODUCTION VALUE</span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-light text-white">Master Color Calibration</h3>
+                    <p class="text-contrast-mid text-sm font-light leading-relaxed">
+                        Custom studio color-grading templates engineered specifically to preserve and accentuate natural woods, marble grain reflections, and complex interior/exterior architectural lighting layouts.
+                    </p>
+                </div>
+
+                <div class="space-y-4 border-l border-[#C8A96E]/30 pl-6">
+                    <span class="font-mono text-xs text-[#C8A96E] tracking-widest block font-bold">02 // DELIVERY SPEEDWAY</span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-light text-white">48-Hour Premium Turnaround</h3>
+                    <p class="text-contrast-mid text-sm font-light leading-relaxed">
+                        High-ticket sales cycles demand rapid go-to-market execution. We deploy dedicated offline rendering nodes to deliver pristine, optimized 4K multi-platform outputs inside a guaranteed 48-hour timeline.
+                    </p>
+                </div>
+
+                <div class="space-y-4 border-l border-[#C8A96E]/30 pl-6">
+                    <span class="font-mono text-xs text-[#C8A96E] tracking-widest block font-bold">03 // SPATIAL ENVIRONMENTS</span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-light text-white">Multi-Layer Sound Design</h3>
+                    <p class="text-contrast-mid text-sm font-light leading-relaxed">
+                        We systematically scrub muddy ambient source audio and overlay spatial natural sound design. Multi-tier atmospheric foley elements are carefully mixed alongside bespoke orchestral scores.
+                    </p>
+                </div>
+
+                <div class="space-y-4 border-l border-[#C8A96E]/30 pl-6">
+                    <span class="font-mono text-xs text-[#C8A96E] tracking-widest block font-bold">04 // ATTENTION ENGAGEMENT</span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-light text-white">Cinematic Retention Pacing</h3>
+                    <p class="text-contrast-mid text-sm font-light leading-relaxed">
+                        Eliminate generic speed-ramps. We utilize deliberate, structural cutting patterns built directly into spatial movement lines, maintaining absolute high-net-worth engagement from hook to close.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-40 bg-black flex flex-col items-center justify-center text-center px-6">
+        <span class="text-[11px] tracking-[0.5em] text-[#C8A96E] uppercase block mb-6 font-semibold">Initiate Media Engagement</span>
+        <h2 class="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white mb-12 max-w-3xl leading-tight text-balance">
+            Let's establish your listing's cinematic standard.
+        </h2>
+        
+        <div class="relative group inline-block">
+            <a href="mailto:ahebbini@gmail.com?subject=Bespoke%20Cinema%20Production%20Inquiry" class="font-serif text-2xl sm:text-4xl text-white hover:text-[#C8A96E] transition-colors pb-2 block tracking-wide">
+                ahebbini@gmail.com <span class="text-xs font-sans inline-block transform translate-y-[-4px] ml-1 text-[#C8A96E]">↗</span>
+            </a>
+            <span class="absolute bottom-0 left-0 w-full h-[1px] bg-[#C8A96E] origin-right scale-x-0 group-hover:scale-x-100 group-hover:origin-left transition-transform duration-500"></span>
+        </div>
+
+        <div class="mt-32 flex flex-col sm:flex-row items-center justify-between w-full max-w-7xl text-neutral-500 text-[10px] tracking-[0.3em] uppercase pt-10 border-t premium-border gap-6">
+            <div class="font-semibold text-neutral-400">© 2026 Achyutha H P</div>
+            <div class="text-neutral-400">Based in India &bull; Serving Worldwide Campaigns</div>
+            <div class="font-medium text-neutral-500">All Asset Rights Reserved</div>
+        </div>
+    </section>
+
+    <div id="video-modal" role="dialog" aria-modal="true" class="hidden fixed inset-0 bg-black/98 z-50 flex items-center justify-center p-4 backdrop-blur-xl transition-all duration-300">
+        <div class="w-full max-w-5xl relative">
+            <button onclick="closeModal()" class="absolute -top-14 right-0 text-xs tracking-widest text-neutral-400 hover:text-white uppercase flex items-center gap-2 border border-white/10 bg-neutral-900 px-5 py-2">
+                <span>Close Theater</span> <span>✕</span>
+            </button>
+            <div class="aspect-video bg-neutral-950 shadow-2xl border premium-border overflow-hidden">
+                <iframe id="modal-iframe" class="w-full h-full" allowfullscreen allow="autoplay" title="Luxury Real Estate Showroom Engine"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projects = [
+            {
+                title: "The Estate Collection",
+                category: "Branded Series Cut &bull; 4K Cinema",
+                desc: "High-contrast dynamic architectural lines utilizing customized lighting calibration layers to frame luxury living layouts.",
+                // Pure Unbreakable Photo Engine Fallback logic
+                thumbnail: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+                id: "1Rcx7yzoohJF-M5Q0cns9N6wLBdGHBHr6"
+            },
+            {
+                title: "Luxury Villa Masterpiece",
+                category: "Architectural Feature &bull; HDR",
+                desc: "Deliberate tracking passes tracking material surfaces, marble transitions, and premium open environment spatial design.",
+                thumbnail: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+                id: "1OqvcxZ4FRl6_bLmTf1L8fQS_py1LWWGr"
+            },
+            {
+                title: "Modern Contemporary Penthouse",
+                category: "Cinematic Walkthrough Cut",
+                desc: "Fluid geometric match cuts balancing dusk lighting gradients with interior layout spatial movement arrays.",
+                thumbnail: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+                id: "1-SgFojcLLtxcPNzzbRkz2pB8AY0rcO3U"
+            }
+        ];
+
+        function buildPremiumGrid() {
+            const container = document.getElementById('portfolio-grid-engine');
+            if(!container) return;
+
+            projects.forEach((proj, idx) => {
+                const element = document.createElement('div');
+                
+                // Configures advanced layout asymmetry grids based on index position arrays
+                if (idx === 0) {
+                    element.className = "md:col-span-12 group cursor-pointer border-b premium-border pb-12 flex flex-col lg:grid lg:grid-cols-12 gap-8 items-center";
+                    element.innerHTML = `
+                        <div class="w-full lg:col-span-8 aspect-[16/9] bg-neutral-900 overflow-hidden relative border premium-border">
+                            <img src="${proj.thumbnail}" alt="${proj.title}" class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors flex items-center justify-center">
+                                <div class="w-16 h-16 rounded-full border border-white/30 bg-black/40 backdrop-blur-sm flex items-center justify-center text-[#C8A96E] transform group-hover:scale-110 transition-all"><i class="fas fa-play text-xs translate-x-[1px]"></i></div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:col-span-4 space-y-4">
+                            <span class="text-[9px] font-bold tracking-[0.4em] text-[#C8A96E] uppercase block">INDEX // FEATURED ASSIGNMENT</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl font-light text-white group-hover:text-[#C8A96E] transition-colors">${proj.title}</h3>
+                            <p class="text-contrast-mid text-sm font-light leading-relaxed">${proj.desc}</p>
+                            <p class="text-[10px] tracking-widest text-neutral-400 uppercase pt-2 font-mono">${proj.category}</p>
+                        </div>
+                    `;
+                } else {
+                    element.className = "md:col-span-6 group cursor-pointer flex flex-col justify-between";
+                    element.innerHTML = `
+                        <div class="w-full aspect-[16/10] bg-neutral-900 overflow-hidden relative border premium-border mb-6">
+                            <img src="${proj.thumbnail}" alt="${proj.title}" class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full border border-white/30 bg-black/40 backdrop-blur-sm flex items-center justify-center text-[#C8A96E] transform group-hover:scale-110 transition-all"><i class="fas fa-play text-xs translate-x-[1px]"></i></div>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] font-bold tracking-[0.4em] text-[#C8A96E] uppercase block">INDEX // 0${idx + 1}</span>
+                            <h3 class="font-serif text-2xl font-light text-white group-hover:text-[#C8A96E] transition-colors">${proj.title}</h3>
+                            <p class="text-contrast-mid text-sm font-light leading-relaxed line-clamp-2">${proj.desc}</p>
+                            <p class="text-[10px] tracking-widest text-neutral-400 uppercase pt-1 font-mono">${proj.category}</p>
+                        </div>
+                    `;
+                }
+
+                element.onclick = () => openModal(proj);
+                container.appendChild(element);
+            });
+        }
+
+        function openModal(item) {
+            const player = document.getElementById('modal-iframe');
+            if(!player) return;
+            player.src = `https://drive.google.com/file/d/${item.id}/preview?autoplay=1`;
+            document.getElementById('video-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('video-modal').classList.add('hidden');
+            document.getElementById('modal-iframe').src = '';
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('video-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        window.onload = buildPremiumGrid;
+    </script>
+</body>
+</html>
