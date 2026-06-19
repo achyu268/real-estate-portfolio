@@ -78,9 +78,10 @@
                 <a href="#" class="font-serif text-lg tracking-[0.3em] text-[#C8A96E] font-light">ACHYUTHA H P</a>
             </div>
             <div class="flex items-center gap-8 text-[11px] uppercase tracking-[0.25em] font-medium">
-                <a href="#portfolio" class="text-contrast-mid hover:text-[#C8A96E] transition-colors">The Archive</a>
-                <a href="#pillars" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden sm:inline-block">Pillars</a>
-                <a href="#contact" class="text-contrast-high border border-white/20 px-5 py-2.5 rounded-none hover:bg-white hover:text-black transition-all">Inquire</a>
+                <a href="#portfolio" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden sm:inline-block">The Archive</a>
+                <a href="#process" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden sm:inline-block">Process</a>
+                <a href="#pillars" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden md:inline-block">Pillars</a>
+                <a href="#contact" class="text-black bg-[#C8A96E] px-5 py-2.5 rounded-none hover:bg-white transition-all font-semibold">Get a Quote</a>
             </div>
         </div>
     </nav>
@@ -91,8 +92,10 @@
             <iframe
                 src="https://www.youtube.com/embed/OqcFyAbY7oI?autoplay=1&mute=1&loop=1&playlist=OqcFyAbY7oI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=0"
                 frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
+                allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture"
+                allowfullscreen
+                muted
+                title="Background showreel">
             </iframe>
         </div>
         <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505] z-10"></div>
@@ -110,6 +113,13 @@
                     Enter The Portfolio <i class="fas fa-chevron-down text-[10px]"></i>
                 </a>
             </div>
+            <div class="flex items-center justify-center gap-3 pt-2">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C8A96E] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#C8A96E]"></span>
+                </span>
+                <p class="text-neutral-400 text-[11px] tracking-widest uppercase font-light">Currently taking on 3 new projects this month</p>
+            </div>
         </div>
     </section>
 
@@ -117,8 +127,43 @@
         <div class="max-w-7xl mx-auto px-6 md:px-12 mb-20">
             <span class="text-[10px] tracking-[0.5em] text-[#C8A96E] uppercase block mb-3 font-semibold">Curated Media Assets</span>
             <h2 class="font-serif text-4xl sm:text-5xl font-light text-white">The Active Showcase Archive</h2>
+            <div class="inline-flex items-center gap-2 mt-5 border border-[#C8A96E]/40 bg-[#C8A96E]/10 px-4 py-2">
+                <i class="fab fa-youtube text-[#C8A96E] text-sm"></i>
+                <p class="text-[#C8A96E] text-xs tracking-widest uppercase font-semibold">Produced &amp; Hosted on Primeframe Studio &mdash; Our In-House Production Channel</p>
+            </div>
         </div>
         <div class="w-full max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12" id="portfolio-grid-engine"></div>
+    </section>
+
+    <section id="process" class="py-32 bg-black border-b premium-border">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="max-w-3xl mb-20">
+                <span class="text-[10px] tracking-[0.5em] text-[#C8A96E] uppercase block mb-3 font-semibold">How It Works</span>
+                <h2 class="font-serif text-4xl sm:text-6xl font-light text-white leading-tight text-balance">A streamlined path from raw footage to final delivery.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="space-y-4">
+                    <span class="font-serif text-5xl text-[#C8A96E]/40 font-light block">01</span>
+                    <h3 class="font-serif text-xl text-white font-light">Share Your Footage</h3>
+                    <p class="text-contrast-mid text-sm font-light leading-relaxed">Send over raw property walkthroughs, drone shots, or interior captures via any cloud link.</p>
+                </div>
+                <div class="space-y-4">
+                    <span class="font-serif text-5xl text-[#C8A96E]/40 font-light block">02</span>
+                    <h3 class="font-serif text-xl text-white font-light">We Edit In 48 Hours</h3>
+                    <p class="text-contrast-mid text-sm font-light leading-relaxed">Color grading, sound design, and cinematic pacing applied with a guaranteed 48-hour turnaround.</p>
+                </div>
+                <div class="space-y-4">
+                    <span class="font-serif text-5xl text-[#C8A96E]/40 font-light block">03</span>
+                    <h3 class="font-serif text-xl text-white font-light">You Review &amp; Revise</h3>
+                    <p class="text-contrast-mid text-sm font-light leading-relaxed">Get a private preview link, request adjustments, and approve the final cut on your schedule.</p>
+                </div>
+                <div class="space-y-4">
+                    <span class="font-serif text-5xl text-[#C8A96E]/40 font-light block">04</span>
+                    <h3 class="font-serif text-xl text-white font-light">Final Delivery</h3>
+                    <p class="text-contrast-mid text-sm font-light leading-relaxed">Receive optimized 4K exports ready for listings, social media, and client presentations.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="pillars" class="py-32 bg-[#080808] border-b premium-border">
@@ -164,7 +209,7 @@
             <span class="absolute bottom-0 left-0 w-full h-[1px] bg-[#C8A96E] origin-right scale-x-0 group-hover:scale-x-100 group-hover:origin-left transition-transform duration-500"></span>
         </div>
         <div class="mt-32 flex flex-col sm:flex-row items-center justify-between w-full max-w-7xl text-neutral-500 text-[10px] tracking-[0.3em] uppercase pt-10 border-t premium-border gap-6">
-            <div class="font-semibold text-neutral-400">© 2026 Achyutha H P</div>
+            <div class="font-semibold text-neutral-400">© 2026 Achyutha H P <span class="text-neutral-600">&bull; Primeframe Studio</span></div>
             <div class="text-neutral-400">Based in India &bull; Serving Worldwide Campaigns</div>
             <div class="font-medium text-neutral-500">All Asset Rights Reserved</div>
         </div>
@@ -173,6 +218,10 @@
     <!-- VIDEO MODAL -->
     <div id="video-modal" role="dialog" aria-modal="true" class="hidden fixed inset-0 bg-black/98 z-50 flex items-center justify-center p-4 backdrop-blur-xl">
         <div class="w-full max-w-5xl relative">
+            <div class="absolute -top-12 left-0 flex items-center gap-2 text-xs tracking-widest text-[#C8A96E] uppercase">
+                <i class="fab fa-youtube text-sm"></i>
+                <span>Playing via Primeframe Studio</span>
+            </div>
             <button onclick="closeModal()" class="absolute -top-12 right-0 text-xs tracking-widest text-neutral-400 hover:text-white uppercase flex items-center gap-2 border border-white/10 bg-neutral-900 px-5 py-2">
                 <span>Close Theater</span> <span>✕</span>
             </button>
