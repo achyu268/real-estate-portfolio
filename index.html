@@ -77,12 +77,20 @@
             <div>
                 <a href="#" class="font-serif text-lg tracking-[0.3em] text-[#C8A96E] font-light">ACHYUTHA H P</a>
             </div>
-            <div class="flex items-center gap-8 text-[11px] uppercase tracking-[0.25em] font-medium">
+            <div class="flex items-center gap-4 sm:gap-8 text-[11px] uppercase tracking-[0.25em] font-medium">
                 <a href="#portfolio" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden sm:inline-block">The Archive</a>
                 <a href="#process" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden sm:inline-block">Process</a>
                 <a href="#pillars" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden md:inline-block">Pillars</a>
-                <a href="#contact" class="text-black bg-[#C8A96E] px-5 py-2.5 rounded-none hover:bg-white transition-all font-semibold">Get a Quote</a>
+                <a href="#contact" class="text-black bg-[#C8A96E] px-4 sm:px-5 py-2.5 rounded-none hover:bg-white transition-all font-semibold">Get a Quote</a>
+                <button onclick="toggleMobileMenu()" class="sm:hidden text-white text-lg w-8 h-8 flex items-center justify-center">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
+        </div>
+        <div id="mobile-menu" class="hidden sm:hidden absolute top-24 left-0 w-full bg-[#050505] border-b premium-border flex flex-col">
+            <a href="#portfolio" onclick="toggleMobileMenu()" class="text-contrast-mid hover:text-[#C8A96E] transition-colors px-6 py-4 text-xs uppercase tracking-[0.25em] border-b premium-border">The Archive</a>
+            <a href="#process" onclick="toggleMobileMenu()" class="text-contrast-mid hover:text-[#C8A96E] transition-colors px-6 py-4 text-xs uppercase tracking-[0.25em] border-b premium-border">Process</a>
+            <a href="#pillars" onclick="toggleMobileMenu()" class="text-contrast-mid hover:text-[#C8A96E] transition-colors px-6 py-4 text-xs uppercase tracking-[0.25em]">Pillars</a>
         </div>
     </nav>
 
@@ -217,12 +225,12 @@
 
     <!-- VIDEO MODAL -->
     <div id="video-modal" role="dialog" aria-modal="true" class="hidden fixed inset-0 bg-black/98 z-50 flex items-center justify-center p-4 backdrop-blur-xl">
-        <div class="w-full max-w-5xl relative">
-            <div class="absolute -top-12 left-0 flex items-center gap-2 text-xs tracking-widest text-[#C8A96E] uppercase">
+        <div class="w-full max-w-5xl relative pt-20 sm:pt-0">
+            <div class="absolute top-0 sm:-top-12 left-0 flex items-center gap-2 text-xs tracking-widest text-[#C8A96E] uppercase">
                 <i class="fab fa-youtube text-sm"></i>
                 <span>Playing via Primeframe Studio</span>
             </div>
-            <button onclick="closeModal()" class="absolute -top-12 right-0 text-xs tracking-widest text-neutral-400 hover:text-white uppercase flex items-center gap-2 border border-white/10 bg-neutral-900 px-5 py-2">
+            <button onclick="closeModal()" class="absolute top-10 sm:-top-12 right-0 text-xs tracking-widest text-neutral-400 hover:text-white uppercase flex items-center gap-2 border border-white/10 bg-neutral-900 px-5 py-2">
                 <span>Close Theater</span> <span>✕</span>
             </button>
             <div class="video-wrapper shadow-2xl">
@@ -232,6 +240,10 @@
     </div>
 
     <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
         const projects = [
             {
                 title: "The Estate Collection",
