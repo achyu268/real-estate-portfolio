@@ -30,7 +30,7 @@
         .text-balance { text-wrap: balance; }
         .premium-border { border-color: rgba(255, 255, 255, 0.08); }
         .text-contrast-high { color: #FFFFFF; }
-        .text-contrast-mid { color: #E5E5E0; }
+        .text-contrast-mid { color: rgba(255,255,255,0.85); }
 
         /* Hero background video */
         .hero-video-wrap {
@@ -82,7 +82,7 @@
                 <a href="#process" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden sm:inline-block">Process</a>
                 <a href="#pillars" class="text-contrast-mid hover:text-[#C8A96E] transition-colors hidden md:inline-block">Pillars</a>
                 <a href="#contact" class="text-black bg-[#C8A96E] px-4 sm:px-5 py-2.5 rounded-none hover:bg-white transition-all font-semibold">Get a Quote</a>
-                <button onclick="toggleMobileMenu()" class="sm:hidden text-white text-lg w-8 h-8 flex items-center justify-center">
+                <button id="menu-btn" onclick="toggleMobileMenu()" aria-expanded="false" aria-label="Toggle navigation menu" class="sm:hidden text-white text-lg w-10 h-10 flex items-center justify-center">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -234,7 +234,7 @@
             <p class="text-neutral-400 text-[11px] tracking-widest uppercase font-light">Not happy with the first cut? One free revision round, no questions asked.</p>
         </div>
         <div class="mt-32 flex flex-col sm:flex-row items-center justify-between w-full max-w-7xl text-neutral-500 text-[10px] tracking-[0.3em] uppercase pt-10 border-t premium-border gap-6">
-            <div class="font-semibold text-neutral-400">© 2026 Achyutha H P <span class="text-neutral-600">&bull; Primeframe Studio</span></div>
+            <div class="font-semibold text-neutral-400">© <span id="copyright-year"></span> Achyutha H P <span class="text-neutral-600">&bull; Primeframe Studio</span></div>
             <div class="text-neutral-400">Based in India &bull; Serving Worldwide Campaigns</div>
             <div class="font-medium text-neutral-500">All Asset Rights Reserved</div>
         </div>
@@ -257,8 +257,14 @@
     </div>
 
     <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
         function toggleMobileMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('menu-btn');
+            const isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            btn.setAttribute('aria-expanded', String(!isOpen));
         }
 
         const projects = [
@@ -285,10 +291,15 @@
             }
         ];
 
-        // YouTube thumbnail fallback: maxresdefault → hqdefault
+        // YouTube thumbnail fallback chain: maxresdefault -> hqdefault -> default
         function handleThumbError(img, ytId) {
-            img.onerror = null;
-            img.src = 'https://img.youtube.com/vi/' + ytId + '/hqdefault.jpg';
+            if (img.dataset.fallback === 'hq') {
+                img.onerror = null;
+                img.src = 'https://img.youtube.com/vi/' + ytId + '/default.jpg';
+            } else {
+                img.dataset.fallback = 'hq';
+                img.src = 'https://img.youtube.com/vi/' + ytId + '/hqdefault.jpg';
+            }
         }
 
         function buildPremiumGrid() {
@@ -302,7 +313,7 @@
                     element.className = "md:col-span-12 group cursor-pointer border-b premium-border pb-12 flex flex-col lg:grid lg:grid-cols-12 gap-8 items-center";
                     element.innerHTML = `
                         <div class="w-full lg:col-span-8 aspect-[16/9] bg-neutral-900 overflow-hidden relative border premium-border">
-                            <img src="${proj.thumbnail}" alt="${proj.title}" class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" onerror="handleThumbError(this,'${proj.ytId}')">
+                            <img src="${proj.thumbnail}" alt="${proj.title} — luxury real estate cinematic video thumbnail" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" onerror="handleThumbError(this,'${proj.ytId}')">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors flex items-center justify-center">
                                 <div class="w-16 h-16 rounded-full border border-white/30 bg-black/40 backdrop-blur-sm flex items-center justify-center text-[#C8A96E] transform group-hover:scale-110 transition-all"><i class="fas fa-play text-xs translate-x-[1px]"></i></div>
                             </div>
@@ -318,7 +329,7 @@
                     element.className = "md:col-span-6 group cursor-pointer flex flex-col justify-between";
                     element.innerHTML = `
                         <div class="w-full aspect-[16/10] bg-neutral-900 overflow-hidden relative border premium-border mb-6">
-                            <img src="${proj.thumbnail}" alt="${proj.title}" class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" onerror="handleThumbError(this,'${proj.ytId}')">
+                            <img src="${proj.thumbnail}" alt="${proj.title} — luxury real estate cinematic video thumbnail" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" onerror="handleThumbError(this,'${proj.ytId}')">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors flex items-center justify-center">
                                 <div class="w-14 h-14 rounded-full border border-white/30 bg-black/40 backdrop-blur-sm flex items-center justify-center text-[#C8A96E] transform group-hover:scale-110 transition-all"><i class="fas fa-play text-xs translate-x-[1px]"></i></div>
                             </div>
